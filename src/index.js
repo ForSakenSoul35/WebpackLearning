@@ -1,2 +1,3 @@
+let str = require('./test.js')
 const i = "hello  xhb"
-console.log(i)
+console.log(str)
