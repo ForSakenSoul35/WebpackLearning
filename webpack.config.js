@@ -4,6 +4,7 @@ let HtmlWebpackPlugin = require('html-webpack-plugin')
 let MiniCssExtractPlugin = require('mini-css-extract-plugin')
 let OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 let uglifyjsPlugin = require('uglifyjs-webpack-plugin')
+let webpack = require('webpack')
 module.exports = {
     optimization:{//优化项
         minimizer:[
@@ -34,6 +35,11 @@ module.exports = {
     module:{// 模块
         //loader 是从右边向左执行 从下到上
         rules:[
+
+            {
+                test:require.resolve('jquery'),
+                use:'expose-loader?$'
+            },
             // {
             //     test:/\.js$/,
             //     use:{
@@ -126,6 +132,14 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename:'mian.css',
 
+        }),
+        new webpack.ProvidePlugin({
+            jquery:'$' // 在每个模块中都注入$符
         })
-    ]
+            
+        
+    ],
+    externals: { // 不打包这些模块
+        jquery: "jQuery" 
+    }
 }
