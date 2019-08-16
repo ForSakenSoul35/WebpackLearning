@@ -32,7 +32,36 @@ module.exports = {
         // __dirname 表示当前目录下
     },
     module:{// 模块
+        //loader 是从右边向左执行 从下到上
         rules:[
+            // {
+            //     test:/\.js$/,
+            //     use:{
+            //         loader:'eslint-loader',
+            //         options:{
+            //             enforce:'pre',// 设置loader执行顺序 pre normal post
+            //         }
+            //     },
+                
+            // },
+            {
+                test:/\.js$/,
+                use:{
+                    loader:'babel-loader',
+                    options:{ // 用Babel-loader 把Es5-》Es6
+                        presets:[
+                            '@babel/preset-env'
+                        ],
+                        plugins:[
+                            '@babel/plugin-proposal-class-properties',
+                            '@babel/plugin-transform-runtime',
+                        ]
+
+                    }
+                },
+                include:path.resolve(__dirname,'src'),
+                exclude:/node_modules/
+            },
             {
                 test:/\.css$/,
                 // use:[style-loader,css-loader]// css-loader 用来解析 import 这种语法的
