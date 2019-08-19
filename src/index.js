@@ -17,7 +17,7 @@
 // normal
 //post
 // 内联
-console.log($) 
+// console.log($) 
 
 
 // 引入第三方模块  以jquery为例
@@ -26,3 +26,15 @@ console.log($)
  * 2. provicePlugin 给每个模块加一份
  * 3. 通过cdn 引入 但是不打包
  */
+/**
+ * webpack打包图片
+ * 1. 在js中创建图片来引入
+ * 2. 在css中引入 
+ * 3. 在html中
+ * 
+ */
+import logo from './logo.png' // 把图片引入
+let image = new Image();
+console.log(logo)
+image.src = logo
+document.body.appendChild(image)

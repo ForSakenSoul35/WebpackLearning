@@ -86,47 +86,26 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/index.css":
-/*!***********************!*\
-  !*** ./src/index.css ***!
-  \***********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/index.css?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("let str = __webpack_require__(/*! ./test.js */ \"./src/test.js\")\r\nconst i = \"hello  xhb\"\r\nconsole.log(str)\r\n\r\n__webpack_require__(/*! ./index.css */ \"./src/index.css\")\r\n__webpack_require__(/*! ./index.less */ \"./src/index.less\")\r\nlet fn = () => {\r\n    console.log(str)\r\n}\n\n//# sourceURL=webpack:///./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/index.less":
-/*!************************!*\
-  !*** ./src/index.less ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/index.less?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./logo.png */ \"./src/logo.png\");\n/* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_logo_png__WEBPACK_IMPORTED_MODULE_0__);\n// let str = require('./test.js')\n// const i = \"hello  xhb\"\n// console.log(str)\n// require('./index.css')\n// require('./index.less')\n// let fn = () => {\n//     console.log(str)\n// }\n// class A{ // ES7 语法 需要新的插件\n//     a= 1\n// }\n// expose-loader 暴露全局的loader\n// 能打包 但是 不会挂载到浏览器的window对象上\n// pre loader\n// normal\n//post\n// 内联\n// console.log($) \n// 引入第三方模块  以jquery为例\n\n/**\r\n * 1. expose-loader 暴露到window\r\n * 2. provicePlugin 给每个模块加一份\r\n * 3. 通过cdn 引入 但是不打包\r\n */\n\n/**\r\n * webpack打包图片\r\n * 1. 在js中创建图片来引入\r\n * 2. 在css中引入 \r\n * 3. 在html中\r\n * \r\n */\n // 把图片引入\n\nvar image = new Image();\nconsole.log(_logo_png__WEBPACK_IMPORTED_MODULE_0___default.a);\nimage.src = _logo_png__WEBPACK_IMPORTED_MODULE_0___default.a;\ndocument.body.appendChild(image);\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/test.js":
-/*!*********************!*\
-  !*** ./src/test.js ***!
-  \*********************/
+/***/ "./src/logo.png":
+/*!**********************!*\
+  !*** ./src/logo.png ***!
+  \**********************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports =\"xhb\"\n\n//# sourceURL=webpack:///./src/test.js?");
+eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:0)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack:///./src/logo.png?");
 
 /***/ })
 

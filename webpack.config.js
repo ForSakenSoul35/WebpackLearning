@@ -35,6 +35,21 @@ module.exports = {
     module:{// 模块
         //loader 是从右边向左执行 从下到上
         rules:[
+            {
+                test:/\.html$/,
+                use:'html-withimg-loader'
+            },
+            {
+                test:/\.(png|jpg|gif)$/,
+                use:{
+                    // 做一个限制 如果图片小于多个k的时候 用base64来转化 否则用file-loader生成真实的图片
+                    loader:'url-loader',
+                    options:{
+                        limit:200*1024,
+                        outputPath:'img/'
+                    }
+                }
+            },
 
             {
                 test:require.resolve('jquery'),
