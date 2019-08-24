@@ -24,7 +24,7 @@
 /**
  * 1. expose-loader 暴露到window
  * 2. provicePlugin 给每个模块加一份
- * 3. 通过cdn 引入 但是不打包
+ * 3. 通过cdn 引 入 但是不打包
  */
 /**
  * webpack打包图片
