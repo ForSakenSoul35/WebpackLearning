@@ -35,6 +35,7 @@
  */
 import logo from './logo.png' // 把图片引入
 //
+//
 let image = new Image();
 console.log(logo)
 image.src = logo
